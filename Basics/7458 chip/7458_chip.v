@@ -8,7 +8,7 @@ wire p1ap1bp1c, p1fp1ep1d, p2ap2b, p2cp2d;
     assign p1fp1ep1d = (p1f && p1e && p1d);
     assign p2ap2b = (p2a && p2b);
     assign p2cp2d = (p2c && p2d);
-    assign p1y = (p1ap1bp1c ^ p1fp1ep1d);
-    assign p2y = (p2ap2b ^ p2cp2d);
+    assign p1y = (p1ap1bp1c | p1fp1ep1d);
+    assign p2y = (p2ap2b | p2cp2d);
 
 endmodule
